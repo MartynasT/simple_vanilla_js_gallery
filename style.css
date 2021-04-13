@@ -49,7 +49,18 @@ img:hover{
     bottom: 0;
     left: 0;
     background-color: rgba(0,0,0, 0.8);
+
 }
+.bigImg{
+    transform: scale(0.0);
+    transition: all 350ms ease;
+}
+
+.bigImg.active{
+    transform: scale(1);
+}
+
+
 
 .lightbox i{
     font-size: 48px;

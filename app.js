@@ -6,6 +6,7 @@ const lightbox = document.createElement('div');
 const leftArrow = document.createElement('i');
 const rightArrow = document.createElement('i');
 let img = document.createElement('img');
+img.classList.add('bigImg');
 
 lightbox.classList.add('lightbox');
 leftArrow.classList.add('las', 'la-chevron-left');
@@ -48,12 +49,19 @@ rightArrow.addEventListener('click', ()=>{
 
 function showLightBox(item){
   mainHolder.appendChild(lightbox);
+  setTimeout(function (){
+    img.classList.add('active')
+  }, 50)
   img.src = item.src;
 }
 
 document.addEventListener('click', function(event) {
   if (event.target.closest('.main')) return;
-  lightbox.remove();
+  img.classList.remove('active')
+  setTimeout(function (){
+    lightbox.remove();
+  }, 350)
+
 }, false);
 
 
