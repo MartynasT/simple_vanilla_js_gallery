@@ -5,7 +5,9 @@
 }
 
 .main{
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
     position: relative;
     margin:100px auto;
 }
@@ -31,6 +33,12 @@ img{
 
 img:hover{
     filter: grayscale(0%);
+}
+
+@media screen and (max-width: 1024px){
+    .images img{
+        filter: grayscale(0%);
+    }
 }
 
 .lightbox{
